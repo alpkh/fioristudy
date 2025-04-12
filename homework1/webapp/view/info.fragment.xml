@@ -1,0 +1,60 @@
+<core:FragmentDefinition 
+xmlns="sap.m"
+xmlns:core="sap.ui.core"
+xmlns:l="sap.ui.layout"
+xmlns:f="sap.ui.layout.form">
+   
+
+    <Dialog id="idDialog"
+    title="항공편 정보">
+
+    <buttons>
+        <Button text="닫기" press=".onDialogClose" />
+    </buttons>
+        <content>    
+                  
+        <!-- 항공편 정보를 sap.ui.layout.form.SimpleForm 으로 -->
+            <f:SimpleForm id="idConnTable">
+                <f:content>
+                    <Label text="항공사" class="boldLabel"/>
+                    <Text text="{/Carrid}" />
+
+                    <Label text="항공편 번호" class="boldLabel"/>
+                    <Text text="{/Connid}" />
+
+                    <Label text="비행시간" class="boldLabel" />
+                    <Text text="{/Fltime}" />
+
+                    <Label text="출발시간" class="boldLabel"/>
+                    <Text text="{/Deptime}" />
+                    
+                    <Label text="도착시간" class="boldLabel"/>
+                    <Text text="{/Arrtime}" />
+
+                    <Label text="비행거리" class="boldLabel"/>
+                    <Text text="{/Distance}{/Distid}" />
+                </f:content>
+            </f:SimpleForm>
+            
+    </content>      
+    </Dialog>
+</core:FragmentDefinition>
+
+                    <!-- Carrid: oContext.getProperty("Carrid"),
+                    Connid: oContext.getProperty("Connid"),
+                    Fltime: oContext.getProperty("Fltime"),
+                    Deptime: oContext.getProperty("Deptime"),
+                    Arrtime: oContext.getProperty("Arrtime"),
+                    Distance: oContext.getProperty("Distance"),
+                    Distid: oContext.getProperty("Distid"),
+<ObjectNumber number="{ 
+                                        parts: [ {path:'Price'} , {path:'Currency'} ],
+                                        type: 'sap.ui.model.type.Currency',
+                                        formatOptions: {
+                                            showMeasure: false
+                                            
+                                        }
+                                     }"
+
+                                     unit="{Currency}"
+                                    /> -->

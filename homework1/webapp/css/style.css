@@ -1,0 +1,12 @@
+/* Enter your custom styles here */
+
+.blue-header {
+    background-color: blue;
+    color: white;
+    font: bold;
+}
+
+.boldLabel {
+    font-weight: bold;
+    color: rgb(20, 4, 250);
+}
